@@ -15,7 +15,7 @@ class ChatfuelController extends Controller
             ::where("regional", RegionalEnum::getRegionalCHTName($regional))
             ->where("type", "炸物")
             ->skip(0)
-            ->take(5)
+            ->take(10)
             ->get();
 
         $response = [
