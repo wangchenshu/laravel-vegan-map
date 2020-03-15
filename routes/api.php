@@ -31,4 +31,8 @@ Route::namespace('Api')->prefix('v1')->group(function () {
     Route::get('/restaurants', 'RestaurantController@index')->name('restaurant.index');
     // 取得餐廳資料
     Route::get('/restaurant/{restaurant}', 'RestaurantController@show')->name('restaurant.show');
+
+    // Chatfuel
+    // 取得 炸物資料 by 地區
+    Route::get('/chatfuel/fried/{regional}', 'ChatfuelController@searchFried')->name('chatfuel.searchFried');
 });
